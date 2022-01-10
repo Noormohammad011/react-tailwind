@@ -4,9 +4,9 @@ import { AiOutlineClose } from 'react-icons/ai'
 
 const NavBarItem = ({ title, classprops }) => (
   <li className={`mx-4 cursor-pointer ${classprops}`}>{title}</li>
-);
+)
 const Navbar = () => {
-    const [toggleMenu, setToggleMenu] = useState(false)
+  const [toggleMenu, setToggleMenu] = useState(false)
   return (
     <nav className='w-full flex md:justify-center justify-between items-center p-4 bg-gradient-to-r from-indigo-500 to-sky-500'>
       <div className='md:flex-[0.5] flex-initial justify-center items-center'>
@@ -41,8 +41,8 @@ const Navbar = () => {
         )} */}
         {toggleMenu && (
           <ul
-            className='z-10 fixed -top-0 -right-2 p-3 my-2 w-full h-[400px] shadow-2xl md:hidden list-none
-             rounded-md text-white bg-gradient-to-r from-indigo-500 to-sky-500'
+            className='z-10 fixed -top-0 -right-2 p-3 my-2 w-screen h-screen shadow-2xl md:hidden list-none
+             rounded-md text-white bg-gradient-to-r from-indigo-500 to-sky-500 m-[8px]'
           >
             <li className='text-xl w-[40px] mx-[2px]'>
               <AiOutlineClose
