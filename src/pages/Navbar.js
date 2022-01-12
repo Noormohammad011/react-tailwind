@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { HiMenuAlt4 } from 'react-icons/hi'
 import { AiOutlineClose } from 'react-icons/ai'
 
+
 const NavBarItem = ({ title, classprops }) => (
   <li className={`mx-4 cursor-pointer ${classprops}`}>{title}</li>
 )
@@ -23,6 +24,7 @@ const Navbar = () => {
         <li className='bg-[#2952e3] py-2 px-7 mx-4 rounded-full cursor-pointer hover:bg-[#2546bd]'>
           Login
         </li>
+        
       </ul>
       <div className='flex relative'>
         {!toggleMenu && (
@@ -32,13 +34,7 @@ const Navbar = () => {
             onClick={() => setToggleMenu(true)}
           />
         )}
-        {/* {toggleMenu && (
-          <AiOutlineClose
-            fontSize={28}
-            className='text-white md:hidden cursor-pointer'
-            onClick={() => setToggleMenu(false)}
-          />
-        )} */}
+       
         {toggleMenu && (
           <ul
             className='z-10 fixed -top-0 -right-2 p-3 my-2 w-screen h-screen shadow-2xl md:hidden list-none
